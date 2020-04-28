@@ -1,0 +1,24 @@
+<div class="background">
+  <input class="search" [(ngModel)]="movieTitle"/>
+  <button class="btn btn-success search-btn" (click)="onSearch()">Search</button>
+</div>
+
+<br/>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let movie of movies">
+      <div class="card" style="width: 18rem;">
+        <div class="bd-placeholder-img card-img-top" style="width: 18rem; height: 18rem; overflow: hidden;">
+          <img  style="width: 18rem;" [src]="movie.Poster">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.Title }}</h5>
+          <p class="card-text"> Year : {{ movie.Year }} , Type: {{ movie.Type }} </p>
+          <a href="#" class="btn btn-primary">View</a>
+        </div>
+      </div>
+      <br/>
+    </div> 
+  </div>
+</div>
